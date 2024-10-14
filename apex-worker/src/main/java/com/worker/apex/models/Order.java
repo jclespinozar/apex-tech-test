@@ -1,5 +1,6 @@
 package com.worker.apex.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
@@ -20,10 +21,24 @@ public class Order {
     @Getter
     @Setter
     public static class Product {
+        @JsonProperty("id")
         private String productId;
+        @JsonProperty("nombre")
         private String name;
+        @JsonProperty("precio")
         private Double price;
+        @JsonProperty("cantidad")
         private Integer quantity;
+
+        @Override
+        public String toString() {
+            return "Product{" +
+                    "productId='" + productId + '\'' +
+                    ", name='" + name + '\'' +
+                    ", price=" + price +
+                    ", quantity=" + quantity +
+                    '}';
+        }
     }
     @Override
     public String toString() {

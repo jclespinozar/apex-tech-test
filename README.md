@@ -1,10 +1,10 @@
 # Requqerimientos
 
-- Java 17
-- Spring 3.2.2
+- Java 21
+- Spring 3.3.4
 - Maven
-- Node 18
-- postgresql
+- Postgresql
+- MongoDb
 
 # Instalacion
 
